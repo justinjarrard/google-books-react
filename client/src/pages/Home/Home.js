@@ -51,6 +51,7 @@ const Home = () => {
         const books = bookState.books.filter(googleBooks => googleBooks.id !== book.id)
         setBookState({ ...bookState, books })
       })
+      .catch(err => console.error(err))
   }
   return (
     <>

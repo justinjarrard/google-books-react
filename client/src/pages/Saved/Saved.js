@@ -52,13 +52,13 @@ const Saved = () => {
           bookState.books.map(book => (
             <Card key={book._id}>
               <CardHeader
-                title={book.volumeInfo.title}
-                subheader={book.volumeInfo.authors}
+                title={book.title}
+                subheader={book.authors}
               />
               <CardMedia
                 className={classes.media}
-                image={book.volumeInfo.imageLinks.smallThumbnail}
-                title={book.volumeInfo.title}
+                image={book.image}
+                title={book.title}
 
               />
               <CardActions>
