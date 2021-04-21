@@ -13,10 +13,10 @@ router.post('/books', (req, res) => {
     .catch(err => console.log(err))
 })
 
-// router.delete('/books/:id' (req, res) => {
-//   Book.findByIdAndDelete(req.params.id)
-//     .then(() => res.sendStatus(200))
-//     .catch(err => console.log(err))
-// })
+router.delete('/books/:id', (req, res) => {
+  Book.findByIdAndDelete(req.params.id)
+    .then(() => res.sendStatus(200))
+    .catch(err => console.log(err))
+})
 
 module.exports = router
